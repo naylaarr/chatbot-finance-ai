@@ -1,2 +1,6 @@
+chatbot/*.bin filter=lfs diff=lfs merge=lfs -text
+chatbot/*.npy filter=lfs diff=lfs merge=lfs -text
+chatbot/chatbotIndoBert/*.bin filter=lfs diff=lfs merge=lfs -text
+chatbot/chatbotIndoBert/*.npy filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.npy filter=lfs diff=lfs merge=lfs -text
