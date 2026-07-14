@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #e0f2fe 0%,
+    #38bdf8 50%,
+    #1d4ed8 100%
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.chat-container {
+  width: 700px;
+  height: 850px;
+  background: rgba(255,255,255,0.96);
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+}
+
+/* Header */
+.chat-header {
+  background: linear-gradient(
+    90deg,
+    #0f172a,
+    #1d4ed8
+  );
+  color: white;
+  padding: 22px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Chat Area */
+.chat-box {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 10px;
+}
+
+/* Bot Message */
+.bot-message {
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #eff6ff
+  );
+  color: #1e293b;
+  padding: 14px 18px;
+  border-radius: 18px 18px 18px 5px;
+  margin-bottom: 12px;
+  max-width: 75%;
+  line-height: 1.6;
+  font-size: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* User Message */
+.user-message {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  color: white;
+  padding: 14px 18px;
+  border-radius: 18px 18px 5px 18px;
+  margin-bottom: 12px;
+  margin-left: auto;
+  max-width: 75%;
+  line-height: 1.6;
+  font-size: 15px;
+  box-shadow: 0 3px 10px rgba(37,99,235,0.3);
+}
+
+/* Input Area */
+.chat-input {
+  display: flex;
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Input */
+.chat-input input {
+  flex: 1;
+  padding: 15px 18px;
+  border: 2px solid #dbeafe;
+  border-radius: 14px;
+  outline: none;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.chat-input input:focus {
+  border-color: #2563eb;
+}
+
+/* Button */
+.chat-input button {
+  margin-left: 10px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.35);
+}

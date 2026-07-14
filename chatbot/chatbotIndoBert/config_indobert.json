@@ -1,0 +1,5 @@
+{
+    "model_name": "indobenchmark/indobert-base-p1",
+    "embedding_dimension": 768,
+    "chunk_count": 7434
+}

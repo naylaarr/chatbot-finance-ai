@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Finance AI Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='dashboard.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            💰 Finance AI Chatbot
+
+        </div>
+
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/chatbot">Chatbot</a>
+            <a href="/chatbot-indobert">Chatbot IndoBERT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <section class="hero">
+
+        <h1>
+
+            Sistem Tanya Jawab Informasi Keuangan
+
+        </h1>
+
+        <p>
+
+            Sistem ini memanfaatkan teknologi Artificial Intelligence
+            untuk membantu pengguna memperoleh informasi keuangan
+            secara cepat, akurat, dan relevan menggunakan
+            semantic search berbasis embedding.
+
+        </p>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- MODEL -->
+    <!-- ========================= -->
+
+    <section class="content">
+
+        <div class="card">
+
+            <h2>
+
+                Model yang Digunakan
+
+            </h2>
+
+            <div class="box">
+
+                <h3>E5-base-v2</h3>
+
+                <p>
+
+                    Mengubah pertanyaan pengguna menjadi representasi vektor (embedding) 
+                    sehingga dapat dilakukan semantic similarity search menggunakan FAISS.
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h3>FAISS</h3>
+
+                <p>
+
+                    Digunakan sebagai vector database untuk mencari
+                    dokumen atau jawaban yang memiliki tingkat
+                    kemiripan paling tinggi terhadap pertanyaan pengguna.
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h3>IndoBERT</h3>
+
+                <p>
+
+                    Model bahasa yang dilatih menggunakan korpus Bahasa Indonesia. 
+                    Pada penelitian ini, IndoBERT digunakan untuk mengubah pertanyaan pengguna 
+                    menjadi representasi vektor (embedding) sehingga dapat dilakukan semantic similarity search menggunakan FAISS 
+                    pada data berbahasa Indonesia.
+                    
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DATASET -->
+
+        <div class="card">
+
+            <h2>
+
+                Dataset
+
+            </h2>
+
+            <div class="info">
+
+                <span>Nama Dataset</span>
+
+                <p>FINQA (Financial Question Answering)</p>
+
+            </div>
+
+            <div class="info">
+
+                <span>Format Data</span>
+
+                <p>JSON</p>
+
+            </div>
+
+            <div class="info">
+
+                <span>Kolom Dataset</span>
+
+                <p>
+
+                    Question, Answer, Text
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TUJUAN -->
+
+        <div class="card">
+
+            <h2>
+
+                Tujuan
+
+            </h2>
+
+            <ul>
+
+                <li>
+
+                    Mengembangkan sistem tanya jawab
+                    berbasis Natural Language Processing.
+
+                </li>
+
+                <li>
+
+                    Membantu pengguna memperoleh
+                    informasi keuangan.
+
+                </li>
+
+                <li>
+
+                    Menampilkan jawaban yang
+                    paling relevan berdasarkan semantic search.
+
+                </li>
+
+                <li>
+
+                    Menampilkan konteks informasi
+                    agar pengguna lebih memahami jawaban.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- MANFAAT -->
+
+        <div class="card">
+
+            <h2>
+
+                Manfaat
+
+            </h2>
+
+            <ul>
+
+                <li>
+
+                    Mempermudah pencarian informasi finansial.
+
+                </li>
+
+                <li>
+
+                    Memberikan jawaban beserta konteks pendukung.
+
+                </li>
+
+                <li>
+
+                    Mendukung proses pembelajaran
+                    mengenai laporan keuangan.
+
+                </li>
+
+                <li>
+
+                    Mengimplementasikan Artificial Intelligence
+                    dalam bidang keuangan.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ALUR -->
+
+        <div class="card">
+
+            <h2>
+
+                Alur Sistem
+
+            </h2>
+
+            <div class="flow">
+
+                <div class="step">
+
+                    👤
+
+                    <h4>User</h4>
+
+                </div>
+
+                <div class="arrow">
+
+                    →
+
+                </div>
+
+                <div class="step">
+
+                    🧠
+
+                    <h4>E5-base-v2 / IndoBERT</h4>
+
+                </div>
+
+                <div class="arrow">
+
+                    →
+
+                </div>
+
+                <div class="step">
+
+                    📂
+
+                    <h4>FAISS</h4>
+
+                </div>
+
+                <div class="arrow">
+
+                    →
+
+                </div>
+
+                <div class="step">
+
+                    📑
+
+                    <h4>Dataset FINQA</h4>
+
+                </div>
+
+                <div class="arrow">
+
+                    →
+
+                </div>
+
+                <div class="step">
+
+                    💬
+
+                    <h4>Jawaban + Konteks</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <h3>
+
+            Finance AI Chatbot
+
+        </h3>
+
+        <p>
+
+            Sistem Tanya Jawab Informasi Keuangan
+            Berbasis E5-base-v2 / IndoBERT dan FAISS
+
+        </p>
+
+        <p>
+
+            © 2026 Politeknik Caltex Riau
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
